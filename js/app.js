@@ -15,9 +15,9 @@ const services = [
 ];
 
 const testimonials = [
-  { name: 'Mariana S.', text: 'O ambiente é muito acolhedor e o atendimento foi extremamente cuidadoso. Saí me sentindo renovada!' },
-  { name: 'Camila R.', text: 'Gostei muito da atenção aos detalhes. O espaço é lindo e a experiência foi muito tranquila do começo ao fim.'},
-  { name: 'Fernanda A.', text: 'A experiência foi leve e agradável. Adorei poder conversar sobre o protocolo antes do atendimento.'}
+  { name: 'Mariana S.', text: 'O ambiente é muito acolhedor e o atendimento foi extremamente cuidadoso. Saí me sentindo renovada!', role: '' },
+  { name: 'Camila R.', text: 'Gostei muito da atenção aos detalhes. O espaço é lindo e a experiência foi muito tranquila do começo ao fim.', role: '' },
+  { name: 'Fernanda A.', text: 'A experiência foi leve e agradável. Adorei poder conversar sobre o protocolo antes do atendimento.', role:''  }
 ];
 
 const products = [
