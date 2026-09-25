@@ -1,177 +1,2408 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jéssica Costa — Estética e bem-estar. Conheça nossos serviços e solicite seu atendimento pelo WhatsApp.">
-  <title>Jéssica Costa | Estética e Bem-Estar</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta
+    name="description"
+    content="Jéssica Costa — Estética e Bem-Estar. Conheça nossos serviços e solicite seu atendimento."
+  >
+
+  <meta
+    name="theme-color"
+    content="#8b6f47"
+  >
+
+  <title>
+    Jéssica Costa | Estética e Bem-Estar
+  </title>
+
+
+  <!-- =====================================================
+       FAVICON
+       ===================================================== -->
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="assets/favicon.svg"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="assets/favicon.svg"
+  >
+
+
+  <!-- =====================================================
+       GOOGLE FONTS
+       ===================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       BOOTSTRAP
+       ===================================================== -->
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       BOOTSTRAP ICONS
+       ===================================================== -->
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       CSS DO PROJETO
+       ===================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+
+  <!-- =====================================================
+       AJUSTES RESPONSIVOS
+       ===================================================== -->
+
+  <style>
+
+    /* =====================================================
+       RESET RESPONSIVO
+       ===================================================== */
+
+    html,
+    body {
+
+      width: 100%;
+      max-width: 100%;
+
+      margin: 0;
+      padding: 0;
+
+      overflow-x: hidden;
+
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+      box-sizing: border-box;
+
+    }
+
+
+    img {
+
+      max-width: 100%;
+      height: auto;
+
+    }
+
+
+    /* =====================================================
+       NAVBAR
+       ===================================================== */
+
+    .glass-nav {
+
+      width: 100%;
+      max-width: 100%;
+
+      z-index: 1050;
+
+    }
+
+
+    .navbar-brand {
+
+      min-width: 0;
+
+    }
+
+
+    .navbar-brand > span:last-child {
+
+      min-width: 0;
+
+    }
+
+
+    .navbar-brand small {
+
+      display: block;
+
+      font-size: 0.70rem;
+
+      white-space: nowrap;
+
+    }
+
+
+    /* =====================================================
+       SEÇÕES DE IMAGEM
+       ===================================================== */
+
+    .snap-section {
+
+      width: 100%;
+      max-width: 100%;
+
+      min-height: 100svh;
+      min-height: 100dvh;
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+
+    .image-section {
+
+      width: 100%;
+      max-width: 100%;
+
+      min-height: 100svh;
+      min-height: 100dvh;
+
+      background-image: var(--bg);
+
+      background-repeat: no-repeat;
+
+      background-size: cover;
+
+      background-position: center center;
+
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero-copy {
+
+      width: min(650px, 100%);
+
+      max-width: 100%;
+
+    }
+
+
+    .hero-copy p {
+
+      max-width: 620px;
+
+      font-size: clamp(
+        0.95rem,
+        2vw,
+        1.15rem
+      );
+
+      line-height: 1.65;
+
+    }
+
+
+    .hero-mini {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 1rem;
+
+      max-width: 100%;
+
+    }
+
+
+    .hero-mini > div {
+
+      min-width: 0;
+
+      flex: 1 1 120px;
+
+    }
+
+
+    /* =====================================================
+       PAINÉIS
+       ===================================================== */
+
+    .content-panel {
+
+      width: min(
+        560px,
+        100%
+      );
+
+      max-width: 100%;
+
+    }
+
+
+    .third-panel {
+
+      width: min(
+        420px,
+        100%
+      );
+
+      max-width: 100%;
+
+    }
+
+
+    /* =====================================================
+       TÍTULOS
+       ===================================================== */
+
+    h1 {
+
+      font-size: clamp(
+        2rem,
+        7vw,
+        4.5rem
+      );
+
+      line-height: 1.05;
+
+      overflow-wrap: break-word;
+
+    }
+
+
+    h2 {
+
+      font-size: clamp(
+        1.75rem,
+        5vw,
+        3.2rem
+      );
+
+      line-height: 1.15;
+
+      overflow-wrap: break-word;
+
+    }
+
+
+    h3 {
+
+      overflow-wrap: break-word;
+
+    }
+
+
+    p {
+
+      overflow-wrap: break-word;
+
+    }
+
+
+    /* =====================================================
+       BOTÕES
+       ===================================================== */
+
+    .btn {
+
+      max-width: 100%;
+
+      white-space: normal;
+
+    }
+
+
+    /* =====================================================
+       SERVIÇOS
+       ===================================================== */
+
+    #priceGrid {
+
+      width: 100%;
+      max-width: 100%;
+
+      margin-left: 0;
+      margin-right: 0;
+
+    }
+
+
+    #priceGrid > div {
+
+      min-width: 0;
+
+    }
+
+
+    /* =====================================================
+       TABELA
+       ===================================================== */
+
+    .modern-table-wrap {
+
+      width: 100%;
+      max-width: 100%;
+
+      overflow-x: auto;
+
+      -webkit-overflow-scrolling: touch;
+
+    }
+
+
+    .modern-table {
+
+      min-width: 620px;
+
+    }
+
+
+    /* =====================================================
+       BOOKING
+       ===================================================== */
+
+    .booking-section {
+
+      width: 100%;
+      max-width: 100%;
+
+      overflow: hidden;
+
+    }
+
+
+    .booking-section .row {
+
+      width: 100%;
+
+      margin-left: 0;
+      margin-right: 0;
+
+    }
+
+
+    .booking-section [class*="col-"] {
+
+      min-width: 0;
+
+    }
+
+
+    .booking-card {
+
+      width: 100%;
+      max-width: 100%;
+
+      overflow: hidden;
+
+    }
+
+
+    .booking-card-head {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 1rem;
+
+    }
+
+
+    .booking-card-head span {
+
+      min-width: 0;
+
+      overflow-wrap: break-word;
+
+    }
+
+
+    .booking-card input,
+    .booking-card select,
+    .booking-card textarea {
+
+      width: 100%;
+      max-width: 100%;
+
+      min-width: 0;
+
+      font-size: 16px;
+
+    }
+
+
+    .booking-card textarea {
+
+      resize: vertical;
+
+    }
+
+
+    .booking-status {
+
+      width: 100%;
+
+      max-width: 100%;
+
+      overflow-wrap: break-word;
+
+    }
+
+
+    /* =====================================================
+       WHATSAPP FLUTUANTE
+       ===================================================== */
+
+    .floating-whatsapp {
+
+      max-width: calc(
+        100vw - 24px
+      );
+
+    }
+
+
+    /* =====================================================
+       TABLET
+       ===================================================== */
+
+    @media (max-width: 991.98px) {
+
+      .navbar {
+
+        padding-top: 0.55rem;
+        padding-bottom: 0.55rem;
+
+      }
+
+
+      .navbar-collapse {
+
+        margin-top: 0.75rem;
+
+        padding: 0.75rem;
+
+        border-radius: 16px;
+
+        background: rgba(
+          20,
+          20,
+          20,
+          0.94
+        );
+
+      }
+
+
+      .navbar-nav {
+
+        align-items: stretch !important;
+
+      }
+
+
+      .navbar-nav .nav-link {
+
+        padding: 0.65rem 0.75rem;
+
+      }
+
+
+      .navbar-nav .btn {
+
+        width: 100%;
+
+        margin-top: 0.5rem;
+
+      }
+
+
+      .image-section {
+
+        background-position: center center;
+
+      }
+
+
+      #atendimento {
+
+        background-position:
+          68% center;
+
+      }
+
+
+      #localizacao {
+
+        background-position:
+          center 50%;
+
+      }
+
+
+      .hero-copy {
+
+        width: min(
+          600px,
+          92vw
+        );
+
+      }
+
+
+      .content-panel {
+
+        width: min(
+          600px,
+          92vw
+        );
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SMARTPHONES
+       ===================================================== */
+
+    @media (max-width: 767.98px) {
+
+      body {
+
+        width: 100%;
+
+        overflow-x: hidden;
+
+      }
+
+
+      .container {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding-left: 18px;
+        padding-right: 18px;
+
+      }
+
+
+      .snap-section {
+
+        min-height: 100svh;
+
+        min-height: 100dvh;
+
+      }
+
+
+      .image-section {
+
+        min-height: 100svh;
+
+        min-height: 100dvh;
+
+      }
+
+
+      /* ================================================
+         NAVBAR
+         ================================================ */
+
+      .brand-mark {
+
+        width: 38px;
+        height: 38px;
+
+        flex: 0 0 38px;
+
+      }
+
+
+      .navbar-brand strong {
+
+        font-size: 0.95rem;
+
+      }
+
+
+      .navbar-brand small {
+
+        font-size: 0.60rem;
+
+      }
+
+
+      .navbar-toggler {
+
+        padding: 0.35rem 0.55rem;
+
+      }
+
+
+      /* ================================================
+         HERO
+         ================================================ */
+
+      #inicio {
+
+        background-position:
+          62% center;
+
+      }
+
+
+      .hero-copy {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        transform: none;
+
+      }
+
+
+      .hero-copy .eyebrow {
+
+        font-size: 0.72rem;
+
+      }
+
+
+      .hero-copy p {
+
+        font-size: 0.92rem;
+
+        line-height: 1.5;
+
+        max-width: 100%;
+
+      }
+
+
+      .hero-copy .btn {
+
+        width: 100%;
+
+        min-height: 48px;
+
+      }
+
+
+      .hero-mini {
+
+        display: grid;
+
+        grid-template-columns:
+          repeat(3, minmax(0, 1fr));
+
+        gap: 0.45rem;
+
+        margin-top: 1.25rem !important;
+
+      }
+
+
+      .hero-mini > div {
+
+        min-width: 0;
+
+        padding: 0.35rem;
+
+        text-align: center;
+
+      }
+
+
+      .hero-mini strong {
+
+        display: block;
+
+        font-size: 1.1rem;
+
+      }
+
+
+      .hero-mini span {
+
+        display: block;
+
+        font-size: 0.62rem;
+
+        line-height: 1.2;
+
+      }
+
+
+      .scroll-cue {
+
+        bottom: 12px;
+
+        font-size: 0.65rem;
+
+      }
+
+
+      /* ================================================
+         SEGUNDA SEÇÃO
+         ================================================ */
+
+      #espaco {
+
+        background-position:
+          center center;
+
+      }
+
+
+      .content-panel {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 1.25rem;
+
+      }
+
+
+      .content-panel p {
+
+        font-size: 0.90rem;
+
+        line-height: 1.55;
+
+      }
+
+
+      .feature-grid {
+
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+        gap: 0.5rem;
+
+      }
+
+
+      /* ================================================
+         TERCEIRA SEÇÃO
+         ================================================ */
+
+      #atendimento {
+
+        background-position:
+          68% center;
+
+      }
+
+
+      .third-panel {
+
+        width: min(
+          285px,
+          82vw
+        );
+
+        padding: 1rem;
+
+        margin-left: 0;
+
+      }
+
+
+      .third-panel h2 {
+
+        font-size: 1.35rem;
+
+      }
+
+
+      .third-panel p {
+
+        font-size: 0.78rem;
+
+        line-height: 1.45;
+
+      }
+
+
+      /* ================================================
+         QUARTA SEÇÃO
+         ================================================ */
+
+      #localizacao {
+
+        background-position:
+          center 50%;
+
+      }
+
+
+      /* ================================================
+         SEÇÕES DE CONTEÚDO
+         ================================================ */
+
+      .section-light,
+      .section-cream,
+      .section-dark,
+      .booking-section {
+
+        overflow-x: hidden;
+
+      }
+
+
+      .section-heading {
+
+        width: 100%;
+
+      }
+
+
+      .section-heading h2 {
+
+        font-size: 1.7rem;
+
+      }
+
+
+      .section-heading p {
+
+        font-size: 0.90rem;
+
+      }
+
+
+      /* ================================================
+         CARDS DE SERVIÇO
+         ================================================ */
+
+      #priceGrid {
+
+        margin-top: 1rem !important;
+
+      }
+
+
+      #priceGrid .card,
+      #priceGrid > div {
+
+        min-width: 0;
+
+      }
+
+
+      /* ================================================
+         DEPOIMENTOS
+         ================================================ */
+
+      #testimonialGrid {
+
+        margin-top: 1rem !important;
+
+      }
+
+
+      /* ================================================
+         PRODUTOS
+         ================================================ */
+
+      .modern-table-wrap {
+
+        margin-left: 0;
+
+        margin-right: 0;
+
+        border-radius: 12px;
+
+      }
+
+
+      .modern-table {
+
+        min-width: 560px;
+
+      }
+
+
+      /* ================================================
+         AGENDAMENTO
+         ================================================ */
+
+      .booking-section {
+
+        padding-top: 2.5rem !important;
+
+        padding-bottom: 2.5rem !important;
+
+      }
+
+
+      .booking-section .row {
+
+        --bs-gutter-y: 1.75rem;
+
+      }
+
+
+      .booking-section h2 {
+
+        font-size: 1.8rem;
+
+      }
+
+
+      .booking-points {
+
+        margin-top: 1.25rem;
+
+      }
+
+
+      .booking-card {
+
+        padding: 1rem;
+
+        border-radius: 18px;
+
+      }
+
+
+      .booking-card-head {
+
+        margin-bottom: 1rem;
+
+      }
+
+
+      .booking-card-head span {
+
+        font-size: 0.95rem;
+
+      }
+
+
+      .booking-card label {
+
+        font-size: 0.80rem;
+
+      }
+
+
+      .booking-card .form-control,
+      .booking-card .form-select {
+
+        min-height: 48px;
+
+        padding: 0.65rem 0.75rem;
+
+      }
+
+
+      .booking-card textarea.form-control {
+
+        min-height: 95px;
+
+      }
+
+
+      .booking-card .btn-lg {
+
+        min-height: 50px;
+
+        font-size: 0.95rem;
+
+      }
+
+
+      .form-hint {
+
+        display: block;
+
+        font-size: 0.68rem;
+
+        line-height: 1.4;
+
+      }
+
+
+      /* ================================================
+         WHATSAPP
+         ================================================ */
+
+      .floating-whatsapp {
+
+        right: 12px;
+
+        bottom: 12px;
+
+        min-height: 46px;
+
+        padding: 0.65rem 0.9rem;
+
+      }
+
+
+      /* ================================================
+         FOOTER
+         ================================================ */
+
+      .site-footer {
+
+        text-align: center;
+
+        padding-bottom:
+          calc(
+            1.5rem +
+            env(safe-area-inset-bottom)
+          );
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SMARTPHONES PEQUENOS
+       ===================================================== */
+
+    @media (max-width: 380px) {
+
+      .container {
+
+        padding-left: 14px;
+        padding-right: 14px;
+
+      }
+
+
+      .navbar-brand strong {
+
+        font-size: 0.82rem;
+
+      }
+
+
+      .navbar-brand small {
+
+        display: none;
+
+      }
+
+
+      .hero-copy p {
+
+        font-size: 0.82rem;
+
+      }
+
+
+      .hero-copy .btn {
+
+        min-height: 44px;
+
+        font-size: 0.85rem;
+
+      }
+
+
+      .hero-mini {
+
+        gap: 0.25rem;
+
+      }
+
+
+      .hero-mini strong {
+
+        font-size: 0.95rem;
+
+      }
+
+
+      .hero-mini span {
+
+        font-size: 0.55rem;
+
+      }
+
+
+      .third-panel {
+
+        width: min(
+          270px,
+          82vw
+        );
+
+      }
+
+
+      .third-panel h2 {
+
+        font-size: 1.2rem;
+
+      }
+
+
+      .third-panel p {
+
+        font-size: 0.72rem;
+
+      }
+
+
+      .booking-card {
+
+        padding: 0.85rem;
+
+      }
+
+
+      .booking-section h2 {
+
+        font-size: 1.55rem;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       TELAS MUITO BAIXAS
+       Ex.: celulares 360x640
+       ===================================================== */
+
+    @media (
+      max-width: 767.98px
+    ) and (
+      max-height: 700px
+    ) {
+
+      #inicio {
+
+        min-height: 100svh;
+
+        min-height: 100dvh;
+
+      }
+
+
+      .hero-copy p {
+
+        margin-bottom: 0;
+
+      }
+
+
+      .hero-mini {
+
+        margin-top: 0.75rem !important;
+
+      }
+
+
+      .hero-mini span {
+
+        font-size: 0.56rem;
+
+      }
+
+
+      .scroll-cue {
+
+        display: none;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       PAISAGEM NO CELULAR
+       ===================================================== */
+
+    @media (
+      max-width: 900px
+    ) and (
+      orientation: landscape
+    ) {
+
+      .snap-section {
+
+        min-height: 100svh;
+
+        min-height: 100dvh;
+
+      }
+
+
+      .hero-copy {
+
+        max-width: 65vw;
+
+        transform: scale(
+          0.82
+        );
+
+        transform-origin:
+          left center;
+
+      }
+
+
+      .hero-mini {
+
+        margin-top: 0.75rem !important;
+
+      }
+
+
+      .scroll-cue {
+
+        display: none;
+
+      }
+
+
+      #atendimento {
+
+        background-position:
+          68% center;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       ACESSIBILIDADE
+       ===================================================== */
+
+    @media (
+      prefers-reduced-motion: reduce
+    ) {
+
+      *,
+      *::before,
+      *::after {
+
+        scroll-behavior: auto !important;
+
+        animation-duration:
+          0.01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          0.01ms !important;
+
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <nav
+    class="navbar navbar-expand-lg fixed-top glass-nav"
+    id="mainNav"
+  >
+
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio" aria-label="Jéssica Costa início">
-        <span class="brand-mark">JC</span>
-        <span><strong>Jéssica Costa</strong><small>Estética & bem-estar</small></span>
+
+
+      <a
+        class="navbar-brand d-flex align-items-center gap-2"
+        href="#inicio"
+        aria-label="Jéssica Costa início"
+      >
+
+        <span class="brand-mark">
+          JC
+        </span>
+
+        <span>
+
+          <strong>
+            Jéssica Costa
+          </strong>
+
+          <small>
+            Estética & bem-estar
+          </small>
+
+        </span>
+
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+      >
+
         <span class="navbar-toggler-icon"></span>
+
       </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#espaco">Espaço</a></li>
-          <li class="nav-item"><a class="nav-link" href="#atendimento">Atendimento</a></li>
-          <li class="nav-item"><a class="nav-link" href="#localizacao">Consultório</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-gold btn-sm px-3" href="#agendamento">Agendar horário</a></li>
+
+
+      <div
+        class="collapse navbar-collapse"
+        id="menu"
+      >
+
+        <ul
+          class="navbar-nav ms-auto align-items-lg-center gap-lg-2"
+        >
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="#inicio"
+            >
+              Início
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="#espaco"
+            >
+              Espaço
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="#atendimento"
+            >
+              Atendimento
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="#localizacao"
+            >
+              Consultório
+            </a>
+
+          </li>
+
+
+          <li class="nav-item ms-lg-2">
+
+            <a
+              class="btn btn-gold btn-sm px-3"
+              href="#agendamento"
+            >
+
+              <i class="bi bi-calendar2-check me-1"></i>
+
+              Agendar horário
+
+            </a>
+
+          </li>
+
         </ul>
+
       </div>
+
     </div>
+
   </nav>
 
+
+  <!-- =====================================================
+       CONTEÚDO PRINCIPAL
+       ===================================================== -->
+
   <main>
-    <section id="inicio" class="hero snap-section image-section" style="--bg:url('../assets/jessica-costa.png')">
+
+
+    <!-- ===================================================
+         01 — HERO
+         =================================================== -->
+
+    <section
+      id="inicio"
+      class="hero snap-section image-section"
+      style="--bg:url('assets/jessica-costa.png')"
+    >
+
       <div class="image-overlay"></div>
-      <div class="container position-relative z-2">
+
+
+      <div
+        class="container position-relative z-2"
+      >
+
         <div class="hero-copy reveal">
-          <span class="eyebrow"><i class="bi bi-stars"></i> Estética e bem-estar</span>
-          <p>Atendimento personalizado, ambiente acolhedor e protocolos pensados para valorizar sua beleza e o seu bem-estar.</p>
-          <div class="d-flex flex-wrap gap-3 mt-4">
-            <a class="btn btn-gold btn-lg" href="#agendamento"><i class="bi bi-calendar2-check me-2"></i>Solicitar atendimento</a>
-            <a class="btn btn-outline-light btn-lg" href="#servicos">Ver serviços</a>
+
+          <span class="eyebrow">
+
+            <i class="bi bi-stars"></i>
+
+            Estética e bem-estar
+
+          </span>
+
+
+          <p>
+
+            Atendimento personalizado,
+            ambiente acolhedor e protocolos
+            pensados para valorizar sua beleza
+            e o seu bem-estar.
+
+          </p>
+
+
+          <div
+            class="d-flex flex-wrap gap-3 mt-4"
+          >
+
+            <a
+              class="btn btn-gold btn-lg"
+              href="#agendamento"
+            >
+
+              <i class="bi bi-calendar2-check me-2"></i>
+
+              Solicitar atendimento
+
+            </a>
+
+
+            <a
+              class="btn btn-outline-light btn-lg"
+              href="#servicos"
+            >
+
+              Ver serviços
+
+            </a>
+
           </div>
-          <div class="hero-mini mt-5">
-            <div><strong>08+</strong><span>serviços</span></div>
-            <div><strong>100%</strong><span>atendimento personalizado</span></div>
-            <div><strong>♡</strong><span>cuidado em cada detalhe</span></div>
-          </div>
-        </div>
-      </div>
-      <a class="scroll-cue" href="#espaco"><span>Role para conhecer</span><i class="bi bi-arrow-down"></i></a>
-    </section>
 
-    <section id="espaco" class="snap-section image-section" style="--bg:url('../assets/espaco-estetica.png')">
-      <div class="image-overlay soft"></div>
-      <div class="container position-relative z-2 h-100 d-flex align-items-center">
-        <div class="content-panel reveal">
-          <span class="eyebrow dark"><i class="bi bi-flower1"></i> Segundo ambiente</span>
-          <h2>Um espaço pensado para você desacelerar.</h2>
-          <p>Uma atmosfera elegante, confortável e intimista para transformar cada atendimento em uma experiência de autocuidado.</p>
-          <div class="feature-grid">
-            <div><i class="bi bi-heart-pulse"></i><span>Bem-estar</span></div>
-            <div><i class="bi bi-shield-check"></i><span>Higiene e cuidado</span></div>
-            <div><i class="bi bi-person-hearts"></i><span>Atendimento humanizado</span></div>
-            <div><i class="bi bi-gem"></i><span>Experiência premium</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="atendimento" class="snap-section image-section" style="--bg:url('../assets/atendente.png')">
-      <div class="image-overlay dark"></div>
-      <div class="container position-relative z-2 h-100 d-flex align-items-center justify-content-start">
-        <div class="content-panel dark-panel third-panel reveal">
-          <span class="eyebrow"><i class="bi bi-person-check"></i> Terceiro ambiente</span>
-          <h2>Recepção com atenção aos detalhes.</h2>
-          <p>Da chegada ao pós-atendimento, cada etapa foi pensada para que você se sinta acolhida, respeitada e segura.</p>
-          <a href="#depoimentos" class="text-link">Conheça a experiência das clientes <i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-    </section>
+          <div
+            class="hero-mini mt-5"
+          >
 
-    <section id="localizacao" class="snap-section image-section location-background" style="--bg:url('../assets/frente-consultorio.png')">
-      <div class="image-overlay dark"></div>
-      <div class="container position-relative z-2 h-100 d-flex align-items-end">
-      </div>
-    </section>
+            <div>
 
-    <section id="servicos" class="section-light py-5">
-      <div class="container py-lg-5">
-        <div class="section-heading text-center reveal">
-          <span class="eyebrow dark">Serviços</span>
-          <h2>Cuidados que combinam com o seu momento.</h2>
-          <p>Confira a tabela de serviços e valores de referência.</p>
-        </div>
-        <div id="priceGrid" class="row g-3 g-lg-4 mt-3"></div>
-      </div>
-    </section>
+              <strong>
+                08+
+              </strong>
 
-    <section id="depoimentos" class="section-cream py-5">
-      <div class="container py-lg-5">
-        <div class="section-heading text-center reveal">
-          <span class="eyebrow dark">Experiência</span>
-          <h2>O que nossas clientes dizem</h2>
-          
-        </div>
-        <div id="testimonialGrid" class="row g-4 mt-3"></div>
-      </div>
-    </section>
+              <span>
+                serviços
+              </span>
 
-    <section id="produtos" class="section-dark py-5">
-      <div class="container py-lg-5">
-        <div class="section-heading light text-center reveal">
-          <span class="eyebrow">Produtos & protocolos</span>
-          
-        </div>
-        <div class="table-responsive modern-table-wrap mt-4">
-          <table class="table modern-table align-middle mb-0">
-            <thead><tr><th>Produto</th><th>Categoria</th><th>Unidade</th><th>Estoque mínimo</th><th>Status</th></tr></thead>
-            <tbody id="productTable"></tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section id="agendamento" class="booking-section py-5">
-      <div class="container py-lg-5">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6">
-            <span class="eyebrow dark">Agendamento</span>
-            <h2>Vamos reservar um momento para você?</h2>
-           
-            <div class="booking-points">
-              <div><i class="bi bi-check2-circle"></i><span>Nome e contato organizados</span></div>
-              <div><i class="bi bi-check2-circle"></i><span>Data e horário desejados</span></div>
-              <div><i class="bi bi-check2-circle"></i><span>Serviço descrito livremente</span></div>
             </div>
+
+
+            <div>
+
+              <strong>
+                100%
+              </strong>
+
+              <span>
+                atendimento personalizado
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                ♡
+              </strong>
+
+              <span>
+                cuidado em cada detalhe
+              </span>
+
+            </div>
+
           </div>
-          <div class="col-lg-6">
-            <form id="bookingForm" class="booking-card" novalidate>
-              <div class="booking-card-head">
-                <span>Solicitar atendimento</span><i class="bi bi-calendar-heart"></i>
-              </div>
-              <div class="row g-3">
-                <div class="col-12"><label for="nome">Nome completo</label><input id="nome" name="nome" class="form-control" placeholder="Ex.: Maria Silva" required></div>
-                <div class="col-md-6"><label for="data">Data</label><input id="data" name="data" type="date" class="form-control" required></div>
-                <div class="col-md-6"><label for="horario">Horário</label><input id="horario" name="horario" type="time" class="form-control" required></div>
-                <div class="col-12"><label for="servico">Tipo de serviço</label><textarea id="servico" name="servico" class="form-control" rows="3" placeholder="Ex.: Gostaria de limpeza de pele com peeling de diamante."></textarea></div>
-                <div class="col-12"><button class="btn btn-gold w-100 btn-lg" type="submit"><i class="bi bi-whatsapp me-2"></i>Enviar</button></div>
-                <div class="col-12"><small class="form-hint"><i class="bi bi-lock"></i> </small></div>
-              </div>
-            </form>
-          </div>
+
         </div>
+
       </div>
+
+
+      <a
+        class="scroll-cue"
+        href="#espaco"
+      >
+
+        <span>
+          Role para conhecer
+        </span>
+
+        <i class="bi bi-arrow-down"></i>
+
+      </a>
+
     </section>
+
+
+    <!-- ===================================================
+         02 — ESPAÇO
+         =================================================== -->
+
+    <section
+      id="espaco"
+      class="snap-section image-section"
+      style="--bg:url('assets/espaco-estetica.png')"
+    >
+
+      <div class="image-overlay soft"></div>
+
+
+      <div
+        class="container position-relative z-2 h-100 d-flex align-items-center"
+      >
+
+        <div class="content-panel reveal">
+
+          <span class="eyebrow dark">
+
+            <i class="bi bi-flower1"></i>
+
+            Segundo ambiente
+
+          </span>
+
+
+          <h2>
+            Um espaço pensado para você desacelerar.
+          </h2>
+
+
+          <p>
+
+            Uma atmosfera elegante,
+            confortável e intimista para
+            transformar cada atendimento em
+            uma experiência de autocuidado.
+
+          </p>
+
+
+          <div class="feature-grid">
+
+            <div>
+
+              <i class="bi bi-heart-pulse"></i>
+
+              <span>
+                Bem-estar
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <i class="bi bi-shield-check"></i>
+
+              <span>
+                Higiene e cuidado
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <i class="bi bi-person-hearts"></i>
+
+              <span>
+                Atendimento humanizado
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <i class="bi bi-gem"></i>
+
+              <span>
+                Experiência premium
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         03 — ATENDIMENTO
+         =================================================== -->
+
+    <section
+      id="atendimento"
+      class="snap-section image-section"
+      style="--bg:url('assets/atendente.png')"
+    >
+
+      <div class="image-overlay dark"></div>
+
+
+      <div
+        class="container position-relative z-2 h-100 d-flex align-items-center justify-content-start"
+      >
+
+        <div
+          class="content-panel dark-panel third-panel reveal"
+        >
+
+          <span class="eyebrow">
+
+            <i class="bi bi-person-check"></i>
+
+            Terceiro ambiente
+
+          </span>
+
+
+          <h2>
+            Recepção com atenção aos detalhes.
+          </h2>
+
+
+          <p>
+
+            Da chegada ao pós-atendimento,
+            cada etapa foi pensada para que
+            você se sinta acolhida, respeitada
+            e segura.
+
+          </p>
+
+
+          <a
+            href="#depoimentos"
+            class="text-link"
+          >
+
+            Conheça a experiência das clientes
+
+            <i class="bi bi-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         04 — LOCALIZAÇÃO / FACHADA
+         =================================================== -->
+
+    <section
+      id="localizacao"
+      class="snap-section image-section location-background"
+      style="--bg:url('assets/frente-consultorio.png')"
+    >
+
+      <div class="image-overlay dark"></div>
+
+      <div
+        class="container position-relative z-2 h-100 d-flex align-items-end"
+      >
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SERVIÇOS
+         =================================================== -->
+
+    <section
+      id="servicos"
+      class="section-light py-5"
+    >
+
+      <div class="container py-lg-5">
+
+        <div
+          class="section-heading text-center reveal"
+        >
+
+          <span class="eyebrow dark">
+            Serviços
+          </span>
+
+
+          <h2>
+            Cuidados que combinam com o seu momento.
+          </h2>
+
+
+          <p>
+            Confira a tabela de serviços e valores de referência.
+          </p>
+
+        </div>
+
+
+        <!--
+          O app.js preencherá automaticamente
+          este espaço utilizando /api/services
+        -->
+
+        <div
+          id="priceGrid"
+          class="row g-3 g-lg-4 mt-3"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         DEPOIMENTOS
+         =================================================== -->
+
+    <section
+      id="depoimentos"
+      class="section-cream py-5"
+    >
+
+      <div class="container py-lg-5">
+
+        <div
+          class="section-heading text-center reveal"
+        >
+
+          <span class="eyebrow dark">
+            Experiência
+          </span>
+
+
+          <h2>
+            O que nossas clientes dizem
+          </h2>
+
+        </div>
+
+
+        <div
+          id="testimonialGrid"
+          class="row g-4 mt-3"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         PRODUTOS
+         =================================================== -->
+
+    <section
+      id="produtos"
+      class="section-dark py-5"
+    >
+
+      <div class="container py-lg-5">
+
+        <div
+          class="section-heading light text-center reveal"
+        >
+
+          <span class="eyebrow">
+            Produtos & protocolos
+          </span>
+
+        </div>
+
+
+        <div
+          class="table-responsive modern-table-wrap mt-4"
+        >
+
+          <table
+            class="table modern-table align-middle mb-0"
+          >
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Produto
+                </th>
+
+                <th>
+                  Categoria
+                </th>
+
+                <th>
+                  Unidade
+                </th>
+
+                <th>
+                  Estoque mínimo
+                </th>
+
+                <th>
+                  Status
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody
+              id="productTable"
+            ></tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         AGENDAMENTO
+         =================================================== -->
+
+    <section
+      id="agendamento"
+      class="booking-section py-5"
+    >
+
+      <div class="container py-lg-5">
+
+        <div
+          class="row align-items-center g-5"
+        >
+
+
+          <!-- =============================================
+               INFORMAÇÕES
+               ============================================= -->
+
+          <div class="col-lg-6">
+
+            <span class="eyebrow dark">
+              Agendamento
+            </span>
+
+
+            <h2>
+              Vamos reservar um momento para você?
+            </h2>
+
+
+            <p>
+              Escolha o serviço, informe a data
+              e o horário desejados. Sua
+              solicitação será registrada no
+              sistema.
+            </p>
+
+
+            <div class="booking-points">
+
+              <div>
+
+                <i class="bi bi-check2-circle"></i>
+
+                <span>
+                  Nome e contato organizados
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <i class="bi bi-check2-circle"></i>
+
+                <span>
+                  Data e horário desejados
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <i class="bi bi-check2-circle"></i>
+
+                <span>
+                  Serviço selecionado
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <i class="bi bi-check2-circle"></i>
+
+                <span>
+                  Confirmação pelo WhatsApp
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =============================================
+               FORMULÁRIO
+               ============================================= -->
+
+          <div class="col-lg-6">
+
+            <form
+              id="bookingForm"
+              class="booking-card"
+              novalidate
+            >
+
+
+              <div class="booking-card-head">
+
+                <span>
+                  Solicitar atendimento
+                </span>
+
+                <i
+                  class="bi bi-calendar-heart"
+                ></i>
+
+              </div>
+
+
+              <div class="row g-3">
+
+
+                <!-- NOME -->
+
+                <div class="col-12">
+
+                  <label
+                    for="nome"
+                  >
+                    Nome completo
+                  </label>
+
+
+                  <input
+                    id="nome"
+                    name="nome"
+                    type="text"
+                    class="form-control"
+                    placeholder="Ex.: Maria Silva"
+                    autocomplete="name"
+                    required
+                  >
+
+
+                  <div class="invalid-feedback">
+
+                    Informe seu nome completo.
+
+                  </div>
+
+                </div>
+
+
+                <!-- TELEFONE -->
+
+                <div class="col-12">
+
+                  <label
+                    for="telefone"
+                  >
+                    WhatsApp
+                  </label>
+
+
+                  <input
+                    id="telefone"
+                    name="telefone"
+                    type="tel"
+                    class="form-control"
+                    placeholder="(19) 99999-9999"
+                    autocomplete="tel"
+                    inputmode="numeric"
+                    maxlength="15"
+                    required
+                  >
+
+
+                  <div class="invalid-feedback">
+
+                    Informe um telefone válido.
+
+                  </div>
+
+                </div>
+
+
+                <!-- SERVIÇO -->
+
+                <div class="col-12">
+
+                  <label
+                    for="servico"
+                  >
+                    Serviço
+                  </label>
+
+
+                  <select
+                    id="servico"
+                    name="servico"
+                    class="form-select"
+                    required
+                  >
+
+                    <option value="">
+                      Carregando serviços...
+                    </option>
+
+                  </select>
+
+
+                  <div class="invalid-feedback">
+
+                    Selecione um serviço.
+
+                  </div>
+
+                </div>
+
+
+                <!-- DATA -->
+
+                <div class="col-12 col-sm-6">
+
+                  <label
+                    for="data"
+                  >
+                    Data
+                  </label>
+
+
+                  <input
+                    id="data"
+                    name="data"
+                    type="date"
+                    class="form-control"
+                    required
+                  >
+
+
+                  <div class="invalid-feedback">
+
+                    Escolha uma data válida.
+
+                  </div>
+
+                </div>
+
+
+                <!-- HORÁRIO -->
+
+                <div class="col-12 col-sm-6">
+
+                  <label
+                    for="horario"
+                  >
+                    Horário
+                  </label>
+
+
+                  <input
+                    id="horario"
+                    name="horario"
+                    type="time"
+                    class="form-control"
+                    required
+                  >
+
+
+                  <div class="invalid-feedback">
+
+                    Informe o horário desejado.
+
+                  </div>
+
+                </div>
+
+
+                <!-- OBSERVAÇÕES -->
+
+                <div class="col-12">
+
+                  <label
+                    for="observacoes"
+                  >
+                    Observações
+                  </label>
+
+
+                  <textarea
+                    id="observacoes"
+                    name="observacoes"
+                    class="form-control"
+                    rows="3"
+                    placeholder="Alguma informação que gostaria de informar?"
+                  ></textarea>
+
+                </div>
+
+
+                <!-- BOTÃO -->
+
+                <div class="col-12">
+
+                  <button
+                    id="bookingSubmit"
+                    class="btn btn-gold w-100 btn-lg"
+                    type="submit"
+                  >
+
+                    <i
+                      class="bi bi-whatsapp me-2"
+                    ></i>
+
+                    <span>
+                      Agendar atendimento
+                    </span>
+
+                  </button>
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div class="col-12">
+
+                  <div
+                    id="bookingStatus"
+                    class="booking-status"
+                    role="status"
+                    aria-live="polite"
+                  ></div>
+
+                </div>
+
+
+                <!-- SEGURANÇA -->
+
+                <div class="col-12">
+
+                  <small class="form-hint">
+
+                    <i
+                      class="bi bi-lock me-1"
+                    ></i>
+
+                    Seus dados serão utilizados
+                    apenas para organizar seu
+                    atendimento.
+
+                  </small>
+
+                </div>
+
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <a class="floating-whatsapp" href="#agendamento" aria-label="Agendar pelo WhatsApp"><i class="bi bi-whatsapp"></i><span>Agendar</span></a>
+
+  <!-- =====================================================
+       WHATSAPP FLUTUANTE
+       ===================================================== -->
+
+  <a
+    class="floating-whatsapp"
+    href="#agendamento"
+    aria-label="Agendar pelo WhatsApp"
+  >
+
+    <i class="bi bi-whatsapp"></i>
+
+    <span>
+      Agendar
+    </span>
+
+  </a>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
 
   <footer class="site-footer">
-    <div class="container d-flex flex-column flex-md-row justify-content-between gap-3 align-items-center">
-      <div><strong>Jéssica Costa</strong><span>Estética e bem-estar</span></div>
-      <small>  <span id="year"></span></small>
+
+    <div
+      class="container d-flex flex-column flex-md-row justify-content-between gap-3 align-items-center"
+    >
+
+      <div>
+
+        <strong>
+          Jéssica Costa
+        </strong>
+
+        <span>
+          Estética e bem-estar
+        </span>
+
+      </div>
+
+
+      <small>
+
+        ©
+        <span id="year"></span>
+
+        Jéssica Costa
+
+      </small>
+
     </div>
+
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/app.js"></script>
+
+  <!-- =====================================================
+       BOOTSTRAP JAVASCRIPT
+       ===================================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+  <!-- =====================================================
+       JAVASCRIPT DO PROJETO
+       ===================================================== -->
+
+  <script
+    src="js/app.js"
+  ></script>
+
+
 </body>
+
 </html>

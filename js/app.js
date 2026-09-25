@@ -142,3 +142,33 @@ setupBooking();
 setupNav();
 setupReveal();
 setupYear();
+
+
+require("dotenv").config();
+
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
+const { Pool } = require("pg");
+
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+
+/* =========================================================
+   MIDDLEWARE
+   ========================================================= */
+
+app.use(
+    cors({
+        origin: process.env.CORS_ORIGIN || "*"
+    })
+);
+
+app.use(express.json());
+
+app.use(express.urlencoded({
+    extended: true
+}));
+
