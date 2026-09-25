@@ -401,14 +401,14 @@ app.use((err, req, res, next) => {
 // SERVIDOR
 // ======================================================
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
 
     console.log("");
     console.log("======================================");
     console.log(" JÉSSICA COSTA — ESTÉTICA E BEM-ESTAR");
     console.log("======================================");
-    console.log(` API: http://localhost:${PORT}`);
-    console.log(` Health: http://localhost:${PORT}/api/health`);
+    console.log(` API rodando na porta ${PORT}`);
+    console.log(` Health: /api/health`);
     console.log("======================================");
     console.log("");
 
