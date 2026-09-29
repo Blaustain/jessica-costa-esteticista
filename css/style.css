@@ -971,3 +971,52 @@ and (orientation: portrait) {
     }
 
 }
+
+/* =========================================================
+   AJUSTE FINAL — POSIÇÃO DA FOTO PRINCIPAL
+   Mostra melhor a parte superior da imagem
+   ========================================================= */
+
+/* DESKTOP */
+#inicio {
+    background-position: 60% 30% !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    #inicio {
+        background-position: 60% 27% !important;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    #inicio {
+        background-position: 62% 24% !important;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+   ========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    #inicio {
+        background-position: 62% 20% !important;
+    }
+
+}
