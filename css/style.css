@@ -1020,3 +1020,20 @@ and (orientation: portrait) {
     }
 
 }
+
+/* Acessibilidade: foco visível, contraste e preferências do usuário */
+.skip-link{position:fixed;top:10px;left:10px;z-index:2000;padding:12px 18px;background:#111;color:#fff;border:3px solid #f4cf82;border-radius:8px;transform:translateY(-160%);font-weight:700}
+.skip-link:focus{transform:translateY(0);color:#fff}
+.accessibility-tools{position:fixed;right:16px;top:90px;z-index:1100;display:flex;flex-wrap:wrap;gap:6px;max-width:220px;padding:10px;background:#fff;border:2px solid #173d32;border-radius:14px;box-shadow:0 5px 22px #0002}
+.accessibility-tools button{border:1px solid #173d32;background:#fff;color:#173d32;border-radius:8px;padding:7px 10px;font:600 .78rem 'DM Sans',sans-serif;min-height:38px;cursor:pointer}
+.accessibility-tools button:hover,.accessibility-tools button:focus-visible{background:#173d32;color:#fff;outline:3px solid #d2a85e;outline-offset:2px}
+:focus-visible{outline:3px solid #b7791f!important;outline-offset:3px!important}
+body.a11y-high-contrast{--forest:#000;--forest-2:#000;background:#fff;color:#000}
+body.a11y-high-contrast *:not(img){text-shadow:none!important;box-shadow:none}
+body.a11y-high-contrast p,body.a11y-high-contrast span,body.a11y-high-contrast h1,body.a11y-high-contrast h2,body.a11y-high-contrast h3,body.a11y-high-contrast label{color:#000!important}
+body.a11y-high-contrast .section-dark,body.a11y-high-contrast .site-footer,body.a11y-high-contrast .dark-panel{background:#000!important;color:#fff!important}
+body.a11y-high-contrast .section-dark *,body.a11y-high-contrast .site-footer *,body.a11y-high-contrast .dark-panel *{color:#fff!important}
+body.a11y-high-contrast a,body.a11y-high-contrast button{outline-offset:3px}
+body.a11y-grayscale{filter:grayscale(1)}
+@media(max-width:575px){.accessibility-tools{top:auto;right:10px;bottom:82px;max-width:190px;padding:7px}.accessibility-tools button{font-size:.72rem;padding:6px 8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html{scroll-snap-type:none}.reveal{opacity:1;transform:none}}

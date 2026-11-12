@@ -116,3 +116,33 @@ PostgreSQL
    ↓
 Supabase
 ```
+
+
+---
+
+# ♿ Acessibilidade da interface
+
+A interface recebeu recursos iniciais de acessibilidade para facilitar a navegação por pessoas com diferentes necessidades:
+
+- Link “Pular para o conteúdo principal” para navegação por teclado.
+- Painel de acessibilidade com aumento e redução do tamanho do texto.
+- Modo de alto contraste.
+- Modo de escala de cinza.
+- Botão para restaurar as configurações.
+- Preferências salvas localmente no navegador.
+- Indicador de foco visível para navegação por teclado.
+- Respeito à preferência do sistema operacional por movimento reduzido.
+- Identificação semântica das regiões principais e controles.
+
+Os recursos podem ser utilizados pelos botões flutuantes no canto superior direito (em celulares, próximos ao rodapé).
+
+**Observação:** esta é uma melhoria inicial. Recomenda-se complementar com testes manuais usando teclado e leitores de tela (NVDA, VoiceOver ou TalkBack), além de auditoria automatizada com axe ou Lighthouse. A acessibilidade não deve ser considerada certificada apenas pela inclusão desses recursos.
+
+## Como executar
+
+1. Instale as dependências do backend com `npm install` dentro da pasta `backend`.
+2. Configure as variáveis de ambiente em um arquivo `.env` local, seguindo as instruções do projeto.
+3. Inicie o backend conforme os scripts definidos em `backend/package.json`.
+4. Abra a aplicação por um servidor web local, evitando abrir o HTML diretamente via `file://`.
+
+Por segurança, o arquivo `.env` e a pasta `node_modules` não foram incluídos no pacote distribuído. As dependências podem ser reinstaladas com `npm install`.
